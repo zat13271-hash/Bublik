@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Бублик — кофейня в Бишкеке | Bublik Coffee Shop</title>
+  <meta name="description" content="Бублик — сеть кофеен в Бишкеке. Фирменные бублики с начинками, завтраки, кофе. 8 филиалов по городу.">
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="%23D98324"/><circle cx="50" cy="50" r="16" fill="%23F7EDE2"/></svg>'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <a class="logo" href="#top" aria-label="Бублик — на главную">
+      <svg class="logo__ring" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="14"/>
+        <g fill="currentColor" class="logo__seeds">
+          <ellipse cx="50" cy="11" rx="4" ry="2.4" transform="rotate(8 50 11)"/>
+          <ellipse cx="78" cy="26" rx="4" ry="2.4" transform="rotate(52 78 26)"/>
+          <ellipse cx="87" cy="58" rx="4" ry="2.4" transform="rotate(96 87 58)"/>
+          <ellipse cx="64" cy="85" rx="4" ry="2.4" transform="rotate(150 64 85)"/>
+          <ellipse cx="30" cy="81" rx="4" ry="2.4" transform="rotate(205 30 81)"/>
+          <ellipse cx="13" cy="48" rx="4" ry="2.4" transform="rotate(268 13 48)"/>
+          <ellipse cx="27" cy="20" rx="4" ry="2.4" transform="rotate(320 27 20)"/>
+        </g>
+      </svg>
+      <span class="logo__word" data-i18n="brand">бублик</span>
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#about" class="nav__link" data-i18n="nav.about">О нас</a>
+      <a href="#menu" class="nav__link" data-i18n="nav.menu">Меню</a>
+      <a href="#branches" class="nav__link" data-i18n="nav.branches">Филиалы</a>
+      <a href="#contacts" class="nav__link" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+
+    <div class="header__right">
+      <div class="lang" role="group" aria-label="Language / Язык">
+        <button class="lang__btn is-active" data-lang="ru" type="button">RU</button>
+        <button class="lang__btn" data-lang="en" type="button">EN</button>
+      </div>
+      <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile overlay menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav">
+      <a href="#about" data-i18n="nav.about">О нас</a>
+      <a href="#menu" data-i18n="nav.menu">Меню</a>
+      <a href="#branches" data-i18n="nav.branches">Филиалы</a>
+      <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+  </div>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="hero__kicker reveal">
+          <span data-i18n="hero.kicker">кофейня · бишкек</span>
+        </p>
+
+        <h1 class="hero__title" aria-label="Бублик">
+          <span class="hero__letter" aria-hidden="true">б</span><span class="hero__letter" aria-hidden="true">у</span><span class="hero__bagel" aria-hidden="true"><img src="assets/bagel.png" alt="" width="1024" height="1024"></span><span class="hero__letter" aria-hidden="true">л</span><span class="hero__letter" aria-hidden="true">и</span><span class="hero__letter" aria-hidden="true">к</span>
+        </h1>
+
+        <p class="hero__tagline reveal" data-i18n="hero.tagline">Тёплые бублики, честный кофе и место, куда хочется вернуться</p>
+
+        <div class="hero__cta reveal">
+          <a href="#branches" class="btn btn--solid" data-i18n="hero.cta1">Найти филиал</a>
+          <a href="#menu" class="btn btn--ghost" data-i18n="hero.cta2">Что попробовать</a>
+        </div>
+
+        <div class="hero__badge" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs>
+              <path id="badgeCircle" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/>
+            </defs>
+            <text class="hero__badge-text">
+              <textPath href="#badgeCircle" data-i18n-badge>свежее · тёплое · своё · fresh · warm · ours · </textPath>
+            </text>
+          </svg>
+          <svg class="hero__badge-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="12"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span class="marquee__item" data-i18n-mq>бублики с начинкой ✦ свежий кофе ✦ завтраки весь день ✦ боулы ✦ паста ✦ десерты ✦ лимонады ✦ </span><span class="marquee__item" data-i18n-mq>бублики с начинкой ✦ свежий кофе ✦ завтраки весь день ✦ боулы ✦ паста ✦ десерты ✦ лимонады ✦ </span>
+        </div>
+      </div>
+      <img class="hero__coffee float-slow" src="assets/coffee.png" alt="" aria-hidden="true">
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="section__label">
+        <span class="section__num">01</span>
+        <span class="section__name" data-i18n="about.label">о нас / about</span>
+      </div>
+      <div class="section__body">
+        <h2 class="h2 reveal" data-i18n="about.title">Место с характером и запахом свежей выпечки</h2>
+        <p class="lead reveal" data-i18n="about.text">«Бублик» — бишкекская кофейня, которую знают по фирменным бубликам с начинками: с сёмгой, курицей, мясом и сыром. Сюда приходят на завтрак, поработать с ноутбуком и встретиться с друзьями — в каждом филиале свой уют, а кофе всегда одинаково хорош.</p>
+        <div class="stats reveal">
+          <div class="stat">
+            <span class="stat__num" data-count="4.7">0</span>
+            <span class="stat__label" data-i18n="about.stat1">рейтинг на 2ГИС</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="12000" data-suffix="+">0</span>
+            <span class="stat__label" data-i18n="about.stat2">оценок гостей</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="8">0</span>
+            <span class="stat__label" data-i18n="about.stat3">филиалов в городе</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Menu ===== -->
+    <section class="section section--dark" id="menu">
+      <div class="section__label">
+        <span class="section__num">02</span>
+        <span class="section__name" data-i18n="menu.label">меню / menu</span>
+      </div>
+      <div class="section__body">
+        <h2 class="h2 reveal" data-i18n="menu.title">Что попробовать в первый раз</h2>
+        <p class="lead reveal" data-i18n="menu.note">Актуальное меню с ценами смотрите в карточке филиала на 2ГИС</p>
+
+        <ul class="menu-list">
+          <li class="menu-item reveal">
+            <span class="menu-item__num">01</span>
+            <div>
+              <h3 data-i18n="menu.1.t">Фирменные бублики</h3>
+              <p data-i18n="menu.1.d">С сёмгой, курицей, мясом или сыром — тёплые, с хрустящей корочкой</p>
+            </div>
+          </li>
+          <li class="menu-item reveal">
+            <span class="menu-item__num">02</span>
+            <div>
+              <h3 data-i18n="menu.2.t">Завтраки</h3>
+              <p data-i18n="menu.2.d">Яйца-пашот, каши и боулы — подаём с самого утра</p>
+            </div>
+          </li>
+          <li class="menu-item reveal">
+            <span class="menu-item__num">03</span>
+            <div>
+              <h3 data-i18n="menu.3.t">Паста и горячее</h3>
+              <p data-i18n="menu.3.d">Сытные блюда на обед и ужин</p>
+            </div>
+          </li>
+          <li class="menu-item reveal">
+            <span class="menu-item__num">04</span>
+            <div>
+              <h3 data-i18n="menu.4.t">Супы и салаты</h3>
+              <p data-i18n="menu.4.d">Грибной крем-суп и свежие салаты</p>
+            </div>
+          </li>
+          <li class="menu-item reveal">
+            <span class="menu-item__num">05</span>
+            <div>
+              <h3 data-i18n="menu.5.t">Десерты</h3>
+              <p data-i18n="menu.5.d">Чизкейк и выпечка к кофе</p>
+            </div>
+          </li>
+          <li class="menu-item reveal">
+            <span class="menu-item__num">06</span>
+            <div>
+              <h3 data-i18n="menu.6.t">Кофе и напитки</h3>
+              <p data-i18n="menu.6.d">Латте, настоящий горячий шоколад, смузи и лимонады</p>
+            </div>
+          </li>
+        </ul>
+
+        <a class="btn btn--gold reveal" href="https://2gis.kg/bishkek/search/%D0%91%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%20%D0%BA%D0%BE%D1%84%D0%B5%D0%B9%D0%BD%D1%8F" target="_blank" rel="noopener" data-i18n="menu.cta">Смотреть меню в 2ГИС →</a>
+      </div>
+    </section>
+
+    <!-- ===== Branches ===== -->
+    <section class="section" id="branches">
+      <div class="section__label">
+        <span class="section__num">03</span>
+        <span class="section__name" data-i18n="branches.label">филиалы / locations</span>
+      </div>
+      <div class="section__body">
+        <h2 class="h2 reveal" data-i18n="branches.title">Мы рядом — выбирайте свой «Бублик»</h2>
+
+        <div class="branches" id="branchesGrid"><!-- карточки филиалов рендерятся из js/main.js --></div>
+      </div>
+    </section>
+
+    <!-- ===== Contacts / Footer ===== -->
+    <footer class="footer" id="contacts">
+      <div class="section__label section__label--footer">
+        <span class="section__num">04</span>
+        <span class="section__name" data-i18n="contacts.label">контакты / contacts</span>
+      </div>
+      <div class="footer__body">
+        <h2 class="footer__word" aria-hidden="true"><span data-i18n="brand">бублик</span></h2>
+
+        <div class="footer__grid">
+          <div class="footer__col">
+            <h3 data-i18n="contacts.hours.t">Часы работы</h3>
+            <p data-i18n="contacts.hours.wd">Пн–Сб · 8:00–00:00</p>
+            <p data-i18n="contacts.hours.we">Вс · 10:00–00:00</p>
+            <p class="footer__muted" data-i18n="contacts.hours.kitchen">кухня до 23:00</p>
+          </div>
+          <div class="footer__col">
+            <h3 data-i18n="contacts.reach.t">Связаться</h3>
+            <p><a href="tel:+996500788788" class="footer__link">+996 500 78 87 88</a></p>
+            <p><a href="https://www.instagram.com/ya_booblik/" target="_blank" rel="noopener" class="footer__link">Instagram · @ya_booblik</a></p>
+          </div>
+          <div class="footer__col">
+            <h3 data-i18n="contacts.city.t">Город</h3>
+            <p data-i18n="contacts.city.v">Бишкек, Кыргызстан</p>
+            <p><a href="https://2gis.kg/bishkek/branches/70000001020095175" target="_blank" rel="noopener" class="footer__link" data-i18n="contacts.all">Все филиалы на 2ГИС →</a></p>
+          </div>
+        </div>
+
+        <p class="footer__note" data-i18n="footer.note">Сделано с теплом · Bublik Coffee, Бишкек</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
